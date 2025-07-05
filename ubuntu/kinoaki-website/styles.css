@@ -1,0 +1,637 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #F5F5DC; /* Minimalistic Beige */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif; /* Using Inter for all headings as per The Ordinary's clean style */
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 0; /* Sharp edges like The Ordinary */
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 1px solid #000;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background-color: #000;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #333;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #000;
+    border: 1px solid #000;
+}
+
+.btn-secondary:hover {
+    background-color: #000;
+    color: white;
+}
+
+/* Header/Navigation */
+.header {
+    background-color: #F5F5DC;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 50px; /* Adjust as needed for the new logo */
+    width: auto;
+}
+
+.brand-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.nav-link:hover {
+    color: #E53E3E; /* Red accent for hover */
+}
+
+.header-actions .icon-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    color: #333;
+}
+
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+    background-color: #F5F5DC;
+    min-height: 80vh;
+    gap: 4rem;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-image-container {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Highlights Section */
+.highlights-section {
+    background-color: #F5F5DC;
+    padding: 60px 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.highlights-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.highlight-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    background-color: #F5F5DC;
+    gap: 4rem;
+}
+
+.about-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.about-content h2 {
+    margin-bottom: 1.5rem;
+}
+
+.about-image-container {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Products Section */
+.products-section {
+    padding: 80px 20px;
+    background-color: #F5F5DC;
+    text-align: center;
+}
+
+.products-section h2 {
+    margin-bottom: 3rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 4rem auto;
+}
+
+.product-card {
+    background: white;
+    border: 1px solid #eee;
+    padding: 1.5rem;
+    text-align: left;
+    transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.product-card .price {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #E53E3E;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.delivery-info {
+    margin-top: 4rem;
+}
+
+.delivery-info h3 {
+    margin-bottom: 1.5rem;
+}
+
+.delivery-platforms {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.platform-link {
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #000;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.platform-link:hover {
+    background-color: #000;
+    color: white;
+}
+
+/* Franchise Section */
+.franchise-section {
+    padding: 80px 20px;
+    background-color: #F5F5DC;
+    text-align: center;
+}
+
+.franchise-section h2 {
+    margin-bottom: 1.5rem;
+}
+
+.franchise-section p {
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+}
+
+.franchise-details {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.detail-block {
+    background: white;
+    border: 1px solid #eee;
+    padding: 2rem;
+    flex: 1;
+    min-width: 300px;
+    max-width: 45%;
+    text-align: left;
+}
+
+.detail-block h3 {
+    margin-bottom: 1rem;
+}
+
+.detail-block ul {
+    list-style: none;
+}
+
+.detail-block li {
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.detail-block li span {
+    font-weight: 600;
+    color: #000;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 80px 20px;
+    background-color: #F5F5DC;
+    text-align: center;
+}
+
+.contact-section h2 {
+    margin-bottom: 3rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-info h3 {
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    margin-bottom: 0.5rem;
+}
+
+.social-links {
+    margin-top: 2rem;
+}
+
+.social-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    margin-right: 10px;
+    border-radius: 50%;
+    /* Add background images for social icons */
+}
+
+.contact-form-container h3 {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    background-color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #000;
+}
+
+/* Footer */
+.footer {
+    background-color: #000;
+    color: white;
+    padding: 3rem 20px;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-nav a,
+.footer-legal a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover,
+.footer-legal a:hover {
+    color: #E53E3E;
+}
+
+.footer-nav {
+    margin-bottom: 1.5rem;
+}
+
+.footer-legal {
+    margin-bottom: 1rem;
+}
+
+.copyright {
+    font-size: 0.85rem;
+    color: #ccc;
+}
+
+/* Modal for Franchise Form */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1001; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 40px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    animation: fadeIn 0.5s;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.franchise-form-modal input,
+.franchise-form-modal select,
+.franchise-form-modal textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    background-color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+}
+
+.franchise-form-modal input:focus,
+.franchise-form-modal select:focus,
+.franchise-form-modal textarea:focus {
+    outline: none;
+    border-color: #000;
+}
+
+.franchise-form-modal .btn-primary {
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav {
+        display: none; /* Hide nav on mobile, show with menu-toggle */
+        width: 100%;
+        order: 3;
+        margin-top: 1rem;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero-section,
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content,
+    .about-content {
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .franchise-details .detail-block {
+        max-width: 100%;
+    }
+
+    .footer-nav,
+    .footer-legal {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.japanese-text {
+    font-family: 'Noto Sans JP', sans-serif; /* Using Noto Sans JP for Japanese characters */
+    font-size: 0.8em; /* Slightly smaller than surrounding text */
+    vertical-align: middle;
+    margin-left: 10px;
+    color: #E53E3E; /* Red accent */
+}
+
+
+
